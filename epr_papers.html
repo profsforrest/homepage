@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-28 Thu 16:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Publications on Software Engineering</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Stephanie Forrest" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="data/adaptive.css"type="text/css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+
+<a href="http://asu.edu" id="asulogo">
+  <img src="data/img/biodesign-logo.png" class="" alt="asu logo" width="300" height="115"/>
+</a>
+</a>
+<h1  id="top-title">Stephanie Forrest</h1>
+<div id="links">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="pubs.html">Publications</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="software.html">Software</a></li>
+    <li><a href="students.html">Students</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Publications on Software Engineering</h1>
+<ul class="org-ul">
+<li><a href="data/publications/TACO-GEVO-2020.pdf">Post-compiler performance tuning for general-purpose gpu kernels</a> J. Liou, X. Wang, S. Forrest, and C. Wu. <i>ACM Trans. on Architecture and Code Optimization</i> 17:4, 2020.</li>
+<li>GEVO-ML: Optimizing machine learning codes with evolutionary computation. J. Liou, S. Forrest, and C. Wu In <i>Genetic and Evolutionary Computation Conference (GECCO) Workshop on NeuroEvolution at Work</i> (2020)</li>
+<li>Understanding automatically-generated patches through symbolic invariant differences. P. Cashin, W. Weimer, and S. Forrest. In <i>34th IEEE/ACM Intnl. Conf. on Automated Software Engineering (ASE)</i> (2019)</li>
+<li><a href="data/publications/2019-GI-workshop-GPU.pdf">Genetic improvement of GPU code</a> J. Liou, S. Forrest, and C. Wu. In International Conference on Software Engineering (ICSE) Genetic Improvement Workshop, 2019. Best paper award.</li>
+<li><a href="data/publications/2019-asplos-waci-GPU.pdf">Uncovering performance opportunities by relaxing program semantics of GPGPU kernels</a> J. Liou, S. Forrest, and C. Wu.  In ASPLOS, Wild and Crazy Ideas Session, 2019. Extended abstract.</li>
+<li>Evolutionary computation for improving malware analysis. K. Leach, R. Dougherty, C. Spensky, S. Forrest, and W. Weimer. In ICSE Genetic Improvement Workshop, 2019. Extended abstract. Best presentation award.</li>
+<li><a href="data/publications/2019-dougherty-gecco-workshop.pdf">Genetic algorithms for affine transformations to existential t-restrictions</a>  R. E. Dougherty, E. Lanus, C. J. Colbourn, and S. Forrest. In Genetic and Evolutionary Computation (GECCO) Workshop on Genetic Improvement, 2019. Extended abstract.</li>
+<li><a href="data/publications/2018-thermodynamics-computation.pdf">Automatically reducing energy consumption of software (preprint)</a> J. Lacomis, J. Dorn, W. Weimer, and S. Forrest. In D. Wolpert, editor, <i>The Interplay of Thermodynamics and Computation in Both Natural and Artificial Systems</i> SFI Press, 2019.</li>
+<li><a href="data/publications/2017-tse-power-optimization.pdf">Automatically exploring tradeoffs between software output fidelity and energy costs (preprint</a> J. Dorn, J. Lacomis, W. Weimer, and S. Forrest. <i>ACM Transactions on Software Engineering</i> 45:219–236, 2019.</li>
+<li><a href="data/publications/2016-cem-stelle.pdf">Cactus environment machine: Shared environment call-by-need</a> G. Stelle, D. Stefanovic, S. Olivier and S. Forrest <i>17th Symposium on Trends in Functional Programming</i>, 2019.</li>
+<li><a href="data/publications/2017-bda-neutral.pdf">Neutral networks enable distributed search in evolution</a> J. Renzullo, S. Forrest and M. Moses. <i>Workshop on Biological Distributed Algorithms at Principles of Distributed Computing (PODC)</i>, 2017.</li>
+<li><a href="data/publications/tacas2017.pdf">Connecting program synthesis and reachability: Automatic program repair using test-input generation</a> T. Nguyen, W. Weimer, D. Kapur,
+and S. Forrest.  In <i>International Conference on Tools and
+Algorithms for the Construction and Analysis of Systems (TACAS)</i> (2017).</li>
+<li><a href="data/publications/2017-tse-clarification.pdf">Clarifications on the construction and use of the manybugs benchmark</a> C. Le Goues, Y. Brun, S. Forrest, and W. Weimer <i>Transactions on Software Engineering</i> 43(11):1089–1090, 2017. DOI 10.1109/TSE.2017.2755651</li>
+<li><a href="data/publications/2015-netgear-repair.pdf">Repairing COTS router firmware without access to source code or test suites: A case study in evolutionary software repair</a>  E. Schulte, W. Weimer, and S. Forrest  The First International Genetic Improvement Workshop, 2015 (best paper award).</li>
+<li><a href="data/publications/2015-tse-benchmarks.pdf">The ManyBugs and IntroClass benchmarks for automated repair of C programs</a> C. Le Goues, N. Holtschulte, E.  Smith, Y.  Brun, P.  Devanbu, S. Forrest and W. Weimer <i>ACM Transactions on Software Engineering</i> 41:12, 2015.</li>
+<li><a href="data/publications/2014-asplos-power.pdf">Post-compiler software optimization for reducing energy</a> E. Schulte, J. Dorn, S. Forrest and W. Weimer. <i>Nineteenth Intl. Conf. on Architectural Support for Programming Languages and Operating Systems (ASPLOS)</i>, 2014.</li>
+<li><a href="data/publications/2014-icse-vu-invariants.pdf">Using dynamic analysis to generate disjunctive invariants</a> T. Nguyen, D. Kapur, W. Weimer and S. Forrest.  <i>International Conference on Software Engineering (ICSE)</i> (2014)</li>
+<li><a href="data/publications/2014-tosem-vu-invariants.pdf">DIG: A Dynamic invariant generator for polynomial and array
+invariants</a> T. Nguyen, D. Kapur, W. Weimer, S. Forrest. <i>ACM
+Transactions on Software Engineering and Methodology</i>  23:4 DOI 10.1145/2556782 (2014)</li>
+<li><a href="data/publications/2013-ase-genprog.pdf">Leveraging program equivalence for adaptive program repair: Models and first results</a> W. Weimer, Z. Fry and S. Forrest. <i>Automated Softare Engineering (ASE) Conference</i>, 2013.</li>
+<li><a href="data/publications/2014-gpem-mutational-robustness.pdf">Software mutational robustness</a> Schulte, Z. P. Fry, E. Fast, W. Weimer and S. Forrest <i>Genetic Programming and Evolvable Machines</i>
+15:3 pp. 281-312 (2014) DOI 10.1007/s10710-013-9195-8</li>
+<li><a href="data/publications/2013-asplos-binary-repair.pdf">Automated repair of binary and assembly programs for cooperating
+embedded devices</a>  E. Schulte, J. DiLorenzo, W. Weimer, S. Forrest <i>Eighteenth International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS</i>, 2013.</li>
+<li><a href="data/publications/2013-genprog-challenges.pdf">Current challenges in automatic software repair</a> C. LeGoues, S. Forrest and W. Weimer <i>Software Quality</i> 21:421–443, 2013.</li>
+<li><a href="data/publications/2012-vu-icse-invariants.pdf">Using dynamic analysis to discover polynomial and array invariants</a>
+T. Nguyen, D. Kapur, W. Weimer, S. Forrest <i>International Conference
+on Software Engineering (ICSE'12)</i> (2012) SIGSOFT Distinguished Paper Award</li>
+<li><a href="data/publications/2012-icse-manybugs.pdf">A systematic study of automated program repair: Fixing 55 out of 105 bugs for $8.00 each</a> C. Le Goues, M. Dewey-Vogt, S. Forrest and
+W. Weimer. <i>International Conference on Software Engineering (ICSE)</i> (2012)</li>
+<li><a href="data/publications/2012-gecco-patch.pdf">Representations and operators for improving evolutionary software repair</a> C. Le Goues, W. Weimer, S. Forrest. <i>Genetic and Evolutionary Computation Conference</i>, 2012.</li>
+<li><a href="data/publications/2012-tse-genprog.pdf">GenProg: Automatic bug correction in real programs</a> C. Le Goues,
+T. Nguyen, S. Forrest, W. Weimer. <i>ACM Transactions on Software
+Engineering</i> 38:1 (2012)</li>
+<li><a href="data/publications/2010-cacm-gp.pdf">Automatic program repair with evolutionary computation</a> W. Weimer,
+S. Forrest, C. Le Goues, T. Nguyen.  <i>Communications of the ACM
+Research Highlight</i> 53:5 pp. 109-116 (2010)</li>
+<li><a href="data/publications/2010-ase-asm-repair.pdf">Automated program repair through the evolution of assembly code</a>
+E. Schulte, S. Forrest, and W. Weimer.  <i>25nd IEEE/ACM International
+Conference on Automated Software Engineering</i> (ASE 2010)</li>
+<li><a href="data/publications/2010-gecco-fitness.pdf">Designing better fitness functions for automated program repair</a>
+E. Fast, C. Le Goues, W. Weimer, and S. Forrest. <i>Genetic and
+Evolutionary Computation Conference</i> (2010)</li>
+<li><a href="data/publications/2009-gecco-gp.pdf">A genetic programming approach to automated software repair</a>
+S. Forrest, T. Nguyen, W. Weimer, and C. Le Goues. <i>Genetic and
+Evolutionary Computation Conference (GECCO)</i> (2009).  ACM/SIGEVO 2019 Highest Impact Award.</li>
+<li><a href="data/publications/2009-icse-genprog.pdf">Automatically finding patches using genetic programming</a> W. Weimer,
+T. Nguyen, C. Le Goues, and S. Forrest. ICSE '09: /Proceedings of
+the 2009 IEEE 31st International Conference on Software
+Engineering/, pp. 364&#x2013;374. IEEE Computer Society, Washington,
+DC. (2009).  SIGSOFT Distinguished Paper Award. ICSE 2019 Most Influentical Paper Award.</li>
+<li><a href="data/publications/2006-inoue-java-toc.pdf">On the prediction of Java object lifetimes</a> H. Inoue, D. Stefanovic,
+and S. Forrest.  <i>IEEE Transactions on Computers</i> 55:7, pp. 880-892
+(2006)</li>
+</ul>
+
+<p>
+<a href="pubs.html">Other Publications</a>
+</p>
+</div>
+</body>
+</html>

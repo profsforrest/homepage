@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-28 Thu 16:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CyberBio&#x2014;Computer Security and Other Applications of Immunology</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Stephanie Forrest" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="data/adaptive.css"type="text/css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+
+<a href="http://asu.edu" id="asulogo">
+  <img src="data/img/biodesign-logo.png" class="" alt="asu logo" width="300" height="115"/>
+</a>
+</a>
+<h1  id="top-title">Stephanie Forrest</h1>
+<div id="links">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="pubs.html">Publications</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="software.html">Software</a></li>
+    <li><a href="students.html">Students</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">CyberBio&#x2014;Computer Security and Other Applications of Immunology</h1>
+<ul class="org-ul">
+<li><a href="data/publications/2021-infocom-noisy-nets.pdf">Cutting through the noise to infer autonomous system topology</a> K. Leyba, J. Daymude, J. Young, M. Newman, J. Rexford, and S. Forrest. <i>INFCOM</i> (2022).</li>
+<li><a href="data/publications/2021-wastewater-ethics.pdf">Wastewater monitoring raises privacy and ethical considerations</a> D. Jacobs, T. McDaniel, A. Varsani, R. Halden, S. Forrest, and H. Lee. <i>IEEE Trans. on Technology and Society</i> 2:3 (2021).</li>
+<li><a href="data/publications/2019-compass-chokepoints.pdf">Borders and gateways: Measuring and analyzing national AS chokepoints</a> K. Leyba, B. Edwards, C. Freeman, J. Crandall, and S. Forrest.  In <i>ACM Conference on Computing and Sustainable Societies (COMPASS)</i> 2019.</li>
+<li><a href="data/publications/2019-crispy-seams.pdf">Defeating denial-of-service attacks in a self-managing N-variant system</a> J. Jones, J. Hiser, J. Davidson, and S. Forrest.  In 14th International Symposium on Software Engineering for Adaptive and Self-Managing Systems (SEAMS), 2019. Best paper award.</li>
+<li><a href="data/publications/2017-pnas-blame-game.pdf">Strategic aspects of cyber attack, attribution, and blame</a> B. Edwards, A. Furnas, S. Forrest and R. Axelrod. <i>Proc. Nat. Acad. Sci (PNAS)</i> (Feb. 2017)</li>
+<li><a href="data/publications/2017-neg-selec-alife.pdf">Negative selection based anomaly detector for multimodal health data</a> D. Levin, M. Moses, T. Flanagan, S. Forrest, and P. Finley <i>IEEE Symposium on Artificial Life</i>, 2017.</li>
+<li><a href="data/publications/2017-dsn-afrl.pdf">Trusted software repair for system resiliency</a> W. Weimer, S. Forrest, M. Kim, C. Le Goues and P. Hurley <i>Dependable Systems (DSN)</i> (2017)</li>
+<li><a href="data/publications/2017-cfar-ornl.pdf">Double Helix and RAVEN: A system for Cyber Fault Tolerance and Recovery</a> M. Co, J. W. Davidson, J. D. Hiser, A. Nguyen-Tuong J. C. Knight, W. Weimer, J. Burket, G. L. Frazier, B. Dutertre T. M. Frazier, I. Mason, N. Shankar, and S. Forrest <i>Proc. of the 11th Cyber and Information Security Research Conf</i> Oak Ridge National Laboratory (2016) Runner up, best paper</li>
+<li><a href="data/publications/weis2015.pdf">Hype and heavy tails: A closer look at data breaches</a> B. Edwards,
+S. Hofmeyr, and S. Forrest <i>Workshop on the Economics of Information Security (WEIS)</i> (2015) Best Paper Award</li>
+<li><a href="data/publications/2015-jcs-hype.pdf">Hype and heavy tails: Analyzing ten years of data breaches</a> B. Edwards, S. Hofmeyr, and S. Forrest <i>Journal of Cybersecurity</i> 2(1):3–14 (2016) doi: 10.1093/cybsec/tyw003 (Updated and expanded revision of WEIS 2015 conference paper)</li>
+<li><a href="data/publications/2015-acsac-spam.pdf">Analyzing and modeling longitudinal security data: Promise and pitfalls</a> B. Edwards, S. Hofmeyr, S. Forrest, and M. van Eeten. <i>31st Annual Computer Security Applications Conf. (ACSAC)</i> (2015)</li>
+<li><a href="data/publications/2015-netgear-repair.pdf">Repairing COTS router firmware without access to source code or test suites: A cfase study in evolutionary software repair</a> E. Schulte, W. Weimer, and S. Forrest  The First International Genetic Improvement Workshop, 2015 (2015).</li>
+<li><a href="data/publications/2015-tprc-takedowns.pdf">Implications of security enhancements and interventions for core Internet infrastructure</a> S. Goldberg and S. Forrest <i>The 42nd Research
+Conference on Communication, Information and Internet Policy (TPRC)</i> (2014)</li>
+<li><a href="data/publications/2013-groat-pmc.pdf">Application and analysis of multidimensional negative surveys in participatory sensing applications</a> M. Groat, B. Edwards, J. Horey, W. He and S. Forrest. <i>Pervasive and Mobile Computing</i> 9:372-9 (2013)</li>
+<li><a href="data/publications/2012-nspw-blacklist.pdf">Beyond the Blacklist: Modeling malware spread and the effect of
+interventions</a> B. Edwards, T. Moore, G. Stelle, S. Hofmeyr and S. Forrest <i>New Security Paradignms Workshop (NSPW)</i> (2012)</li>
+<li><a href="data/publications/2012-percomm-neg-survey.pdf">Enhancing privacy in participatory sensing applications with multidimensional data</a> M. Groat, B. Edwards, J. Horey, W. He and S. Forrest. <i>Pervasive Computing (PERCOM)</i> (2012)</li>
+<li><a href="data/publications/2012-horey-icde.pdf">Reconstructing spatial distributions from anonymized locations</a> J. Horey, S. Forrest and M. Groat. <i>Workshop on Secure Data Management (ICDE)</i> (2012)</li>
+<li><a href="data/publications/2012-moving-target-chapter.pdf">Moving target defenses in the Helix self-regenerative architecture</a> C. Le Goues, A. Nguyen-Tuong, H Chen, J. W. Davidson S. Forrest, J. D. Hiser, J. C. Knight and M. Van Gundy. In S. Jajodia et al., editor, <i>Moving Target Defense II: Application of Game Theory and Adversarial Modeling</i> pages 115–146 (2012)</li>
+<li><a href="data/publications/2011-kipda-infocom.pdf">KIPDA: k-indistinguishable privacy-preserving data aggregation in wireless sensor networks</a> M. Groat, W. He, and S. Forrest. <i>INFOCOM</i> (2011).</li>
+<li><a href="data/publications/2010-weis.pdf">Modeling Internet-scale policies for cleaning up malware</a>
+S. Hofmeyr, T. Moore, S. Forrest, B. Edwards and G. Stelle. <i>Tenth Workshop on Economics of Information Security (WEIS)</i> (2011)</li>
+<li><a href="data/publications/2009-nation-state-routing.pdf">Nation-state routing: Censorship, wiretapping, and BGP</a> J. Karlin, S. Forrest, and J. Rexford. <i>Arxiv:0903.3218v1</i> (2009)</li>
+<li><a href="data/publications/2009-ijis-neg-db.pdf">Negative representations of information</a> F. Esponda, S. Forrest, and
+P. Helman. <i>International Journal of Information Security</i> 8:2 (2009).</li>
+<li><a href="data/publications/2008-acsac-syscalls.pdf">The evolution of system-call monitoring</a> Forrest, S. Hofmeyr, and
+A. Somayaji. <i>Proc. of the 2008 Annual Computer Security
+Applications Conference (ACSAC '08)</i>. IEEE Computer Society
+pp. 418-430.  Invited paper for classic papers session (2008).</li>
+<li><a href="data/publications/2009-iclp-trias.pdf">Negative ternary set sharing</a> E. Trias, J. Navas, E. Ackley,
+S. Forrest, and M. Hermenegildo. <i>Proc. of the International
+Conference on Logic Programming (ILCP)</i> Springer Lecture Notes in
+Computer Science, Berlin / Heidelberg pp. 301-316 (2008).</li>
+<li><a href="data/publications/2008-iclp-trias.pdf">Two efficient representations for set-sharing analysis in logic programs</a> E. Trias, J. Navas, E. Ackley, S. Forrest, and
+M. Hermenegildo. <i>Proc. of the 17th International Workshop on
+Functional and (Constraint) Logic Programming</i> Electronic Notes in
+Theoretical Computer Science www.elsevier.nl/locate/entcs (2008).</li>
+<li><a href="data/publications/2008-nspw-malware-ecology.pdf">The ecology of malware</a> J.R. Crandall, R. Ensafi, S. Forrest,
+J. Ladau, and B. Shebaro. <i>Proc. of the New Security Paradigms Workshop (NSPW)</i> Olympic Valley, CA (2008).</li>
+<li><a href="data/publications/2008-bgp-autonomous.pdf">Autonomous security for autonomous systems</a> J. Karlin, J. Rexford,
+and S. Forrest. <i>Computer Networks</i> 52:2908-2923 (2008).</li>
+<li><a href="data/publications/2008-scaling-clock-tree.pdf">Scaling theory for information networks</a> M. Moses, S. Forrest, A. L. Davis, M. Lodder, and J. H. Brown. <i>Journal of the Royal Society Interface</i> 5:20, pp. 1391-1510 (2008).</li>
+<li><a href="data/publications/2007-mobiquitous.pdf">Anonymous data collection in sensor networks</a> J. Horey, M. Groat,
+S. Forrest, and F. Esponda. /The 4th Annual International Conference
+on Mobile and Ubiquitous Systems: Computing, Networking and
+Services./ (2007)</li>
+<li><a href="data/publications/2007-ijis-fernando.pdf">Protecting Data Privacy through Hard-to-Reverse Negative Databases</a>
+F. Esponda, E.S. Ackley, P. Helman, H. Jia, and
+S. Forrest. <i>Int. Journal of Information Security</i> 6:6 (2007).</li>
+<li><a href="data/publications/2006-neg-rel-algebra.pdf">A Relational Algebra for Negative Databases</a> F. Esponda, E. Trias,
+E. Ackley, S. Forrest. <i>UNM Computer Science Tech Report</i>
+TR-CS-2007-18.</li>
+<li><a href="http://www.cs.unm.edu/~treport/tr/07-08/pgbgp-adversary.pdf">Protecting BGP from Invalid Paths</a> J. Karlin, S. Forrest, J. Rexford.
+<i>UNM Computer Science Tech Report</i> TR-CS-2007-12.</li>
+<li><a href="http://rspa.royalsocietypublishing.org/content/463/2081/1231">Radial Structure of the Internet</a> P. Holme, J. Karlin, S. Forrest.
+<i>Proceedings of the Royal Society A: Mathematical, Physical and
+Engineering Sciences</i> 463:1231-1246 (2007).  <a href="data/publications/2006-bgp-petter.pdf">Preprint</a>.</li>
+<li><a href="data/publications/2007-ingham-http-jocn.pdf">Learning DFA representations of HTTP for protecting web applications</a>
+K. Ingham, A. Somayaji, S. Forrest, and J. Burge <i>Journal of
+Computer Networks</i> 51:5 pp. 1239-1255 (2007).</li>
+<li><a href="data/publications/2006-pgbgp-icnp.pdf">Pretty Good BGP: Improving BGP by cautiously adopting routes</a>
+J. Karlin, J. Rexford, and S. Forrest, <i>The 14th IEEE International
+Conference on Network Protocols</i> (2006)</li>
+<li><a href="data/publications/2006-fernando-neg-isc.pdf">Protecting Data Privacy through Hard-to-Reverse Negative Databases</a>
+F. Esponda, H. Jia, S. Forrest, and P. Helman, <i>Proceedings of the
+Information Security Conference (ISC06)</i> Springer LNCS 4176,
+September (2006) pp. 72-84.</li>
+<li><a href="data/publications/2006-gabriela-diversity-clei.pdf">Increasing Communications Security through Protocol Parameter
+Diversity</a> E.G. Barrantes and S. Forrest. In <i>Proceedings of the
+XXXII Latin-American Conference on Informatics</i> (CLEI), Santiago,
+Chile 20-25 August 2006.</li>
+<li><a href="data/publications/2005-java-sandbox-plc.pdf">Inferring Java Security Policies Through Dynamic Sandboxing</a> H. Inoue  and S. Forrest, <i>International Conference on Programming Languages
+and Compilers (PLC 05)</i> (2005).</li>
+<li><a href="data/publications/2005-rise-tissec.pdf">Randomized Instruction Set Emulation</a> G. Barrantes, D. Ackley, S. Forrest, and D. Stefanovic, <i>ACM Transactions on Information Systems Security (TISSEC)</i> Vol 8, No 1 pp. 3-40 (2005).</li>
+<li><a href="data/publications/lisys-ecj-05.pdf">A Machine Learning Evaluation of an Artificial Immune System</a>
+M. Glickman, J. Balthrop, and S. Forrest, <i>Evolutionary Computation
+Journal</i> Vol 13, No 2 pp. 179-212 (2005).</li>
+<li><a href="data/publications/2005-online-neg-db-unconventional-computing.pdf">On-line Negative Databases</a> F. Esponda, E. Ackley, S. Forrest, and
+P. Helman, <i>Journal of Unconventional Computing</i>, Vol 1, No 3
+pp. 201-220 (2005).</li>
+<li><a href="data/publications/2005-chao-adaptive-radio.pdf">Adaptive Radio: Achieving Consensus Using Negative Preferences</a>
+D.L. Chao, J. Balthrop, S. Forrest, <i>ACM GROUP05</i>, 2005.</li>
+<li>'Network Firewalls' K. Ingham and S. Forrest, In V. Rao Vemuri and V. Sreeharirao Eds. <i>Enhancing Computer Security with Smart Technology</i> pp. 9-35.  CRC Press (2005).</li>
+<li><a href="http://www.sciencemag.org/cgi/content/full/304/5670/527?ijkey=p2R7iD3jYd8uA&amp;amp;keytype=ref&amp;amp;siteid=science">Technological Networks and the Spread of Computer Viruses</a>
+J. Balthrop, S. Forrest, M. E. J. Newman, M. M. Williamson,
+<i>Science</i>, Vol 304, Issue 5670, 527-529, 23 April 2004. <a href="data/publications/2004-email-science.pdf">Unofficial version</a></li>
+<li><a href="data/publications/2004-icaris-online-negdb.pdf">On-line negative databases</a> F. Esponda, E. Ackley, S. Forrest, and P. Helman, <i>Third International Conference on Artificial Immune Systems (ICARIS)</i> (2004) BEST PAPER AWARD.</li>
+<li><a href="data/publications/2004-fernando-sys-man-cyber-neg-db.pdf">A formal framework for positive and negative detection</a> F. Esponda,
+S. Forrest, and P. Helman, <i>IEEE Transactions on Systems, Man, and
+Cybernetics</i> 34:1 pp. 357-373 (2004).</li>
+<li><a href="data/publications/2005-ackley-forrest-wild.pdf">Computation in the Wild</a> S. Forrest, J. Balthrop, M. Glickman, and  D. Ackley.  In K. Park and W. Willins Eds. <i>The Internet as a
+Large-Scale Complex System</i>. Oxford University Press (2005).</li>
+<li><a href="data/publications/2003-ccs-diversity.pdf">Randomized Instruction Set Emulation to Disrupt Binary Code Injection Attacks</a> E.G. Barrantes, D.H. Ackley, S. Forrest,
+T.S. Palmer, D. Stefanovic, D.D. Zovi. In <i>Proceedings of the 10th
+ACM Conference on Computer and Communications Security</i> (CCS),
+pp.281-289 (2003).</li>
+<li><a href="data/publications/2003-icaris-fernando.pdf">The Crossover Closure and Partial Match Detection</a> F. Esponda, S. Forrest and P. Helman <i>The second International Conference on
+Artificial Immune Systems</i> (ICARIS) (2003) BEST PAPER AWARD.</li>
+<li><a href="data/publications/2002-nspw-inoue.pdf">Anomaly Intrusion Detection in Dynamic Execution Environments</a> H. Inoue and S. Forrest. <i>New Security Paradigms Workshop</i>
+(2002).</li>
+<li><a href="data/publications/2002-chao-biomorphs-alife.pdf">Generating biomorphs with an aesthetic immune system</a> D. L. Chao and S. Forrest, Artificial Life VIII: <i>The 8th International Conference on the Simulation and Synthesis of Living Systems</i> (2002).</li>
+<li><a href="data/publications/2002-gecco-lisys.pdf">Coverage and Generalization in an Artificial Immune System</a>
+J. Balthrop, F. Esponda, S. Forrest and M. Glickman. In
+W. B. Langdon, E. Cantu-Paz, K. Mathias, R. Roy, D. Davis, R. Poli,
+K. Balakrishnan, V. Hanovar, G. Rudolph, J. Wegener, L. Bull,
+M. A. Potter, A. C. Schultz, J. F. Miller, E. Burke and N. Jonaska,
+editors. <i>Proceedings of the Genetic and Evolutionary Computation
+Conference. (GECCO)</i> Morgan Kaufmann. New York, pp. 3-10
+(2002).</li>
+<li><a href="data/publications/2003-chao-gpem-icaris.pdf">Information Immune Systems</a> D. L. Chao and S. Forrest.  In <i>International Conference on Artificial Immune Systems</i> (ICARIS). pp. 132-140
+(2002). Also publlished as <i>Genetic Programming and Evolvable Machines (GPEM)</i> 4:311-331 (2003).</li>
+<li><a href="data/publications/2002-phys-rev-email-virus.pdf">Email Networks and the Spread of Computer Viruses</a> M. Newman,
+S. Forrest and J. Balthrop. <i>Physical Review E 66</i>, 035101
+(2002).</li>
+<li><a href="data/publications/2002-lisys-balthrop-hawaii.pdf">Revisiting LISYS: Parameters and Normal Behavior</a> J. Balthrop, S. Forrest, and M. Glickman. <i>Proceedings of the 2002 Congress on
+Evolutionary Computation</i> (2002).</li>
+<li><a href="http://cs.unm.edu/~forrest/publications/hofmeyr_forrest.pdf">Architecture for an Artificial Immune System</a> S. Hofmeyr and
+S. Forrest. <i>Evolutionary Computation 7(1)</i>, Morgan-Kaufmann, San
+Francisco, CA, pp. 1289-1296 (2000).</li>
+<li><a href="data/publications/2000-anil-usenix.pdf">Automated Response Using System-Call Delays</a> A. Somayaji and
+S. Forrest. <i>Usenix</i> (2000).</li>
+<li><a href="data/publications/1999-dasgupta-novelty-detection.pdf">Novelty Detection in Time Series Data using Ideas from Immunology</a> D. Dasgupta and S. Forrest. In <i>Proceedings of The International Conference on Intelligent Systems</i> (1999).</li>
+<li><a href="data/publications/1999-oakland-hmm.pdf">Detecting intrusions using system calls: Alternative data models</a>
+C. Warrender, S. Forrest, B. Pearlmutter. <i>1999 IEEE Symposium on
+security and Privacy</i> (1999).</li>
+<li><a href="data/publications/1999-dasgupta-ais-industrial.pdf">Artificial Immune Systems in Industrial Applications</a> D. Dasgupta and
+S. Forrest. Accepted for presentation at the International
+conference on Intelligent Processing and Manufacturing Material
+(IPMM) pp. 257-267. Honolulu, HI. July 10-14, 1999.</li>
+<li><a href="data/publications/1998-jcs-sys-calls.pdf">Intrusion Detection Using Sequences of System Calls</a> S. Hofmeyr,
+S. Forrest, and A. Somayaji <i>Journal of Computer Security</i> Vol. 6,
+pp. 151-180 (1998).</li>
+<li><a href="data/publications/1997-nspw.pdf">Principles of a Computer Immune System</a> A. Somayaji, S. Hofmeyr, and
+S. Forrest <i>New Security Paradigms Workshop</i> (1998).</li>
+<li><a href="data/publications/1997-tech-report-helman-forrest.pdf">A Distributed Approach to Anomaly Detection</a> P. D'haeseleer, S. Forrest, and P. Helman.  Tech Report (1997).</li>
+<li><a href="data/publications/1997-cacm-computer-immune.pdf">Computer Immunology</a> S. Forrest, S. Hofmeyr, and
+A. Somayaji. /Communications of the ACM /Vol. 40, No. 10, pp. 88-96
+(1997).</li>
+<li><a href="data/publications/1997-hotos-diversity.pdf">Building Diverse Computer Systems</a> S. Forrest, A. Somayaji, and
+D. Ackley. In <i>Proceedings of the Sixth Workshop on Hot Topics in
+Operating Systems</i> (1997).</li>
+<li><a href="data/publications/1996-ieee-sp-neg-selec.pdf">An Immunological Approach to Change Detection: Algorithms, Analysis, and Implications</a> P. D'haeseleer, S. Forrest, and P. Helman. In
+<i>Proceedings of the 1996 IEEE Symposium on Computer Security and
+Privacy</i> (1996).</li>
+<li><a href="data/publications/1997-sense-of-self.pdf">A sense of self for Unix processes</a> S. Forrest, S. A. Hofmeyr, A. Somayaji, and T. A. Longstaff. In <i>Proceedings of IEEE Symposium
+on Computer Security and Privacy</i> (1996).</li>
+<li><a href="data/publications/1994-self-nonself.pdf">Self-Nonself Discrimination in a Computer</a> S. Forrest, A.S. Perelson, L. Allen, R. and Cherukuri. In <i>Proceedings of the 1994 IEEE
+Symposium on Research in Security and Privacy</i>, Los Alamitos, CA:
+IEEE Computer Society Press (1994).</li>
+</ul>
+
+<p>
+<a href="pubs.html">Other Publications</a>
+</p>
+</div>
+</body>
+</html>

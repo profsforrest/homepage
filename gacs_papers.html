@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-04-28 Thu 16:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Evolutionary Computation and Machine Learning</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Stephanie Forrest" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="data/adaptive.css"type="text/css">
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+
+<a href="http://asu.edu" id="asulogo">
+  <img src="data/img/biodesign-logo.png" class="" alt="asu logo" width="300" height="115"/>
+</a>
+</a>
+<h1  id="top-title">Stephanie Forrest</h1>
+<div id="links">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="teaching.html">Teaching</a></li>
+    <li><a href="pubs.html">Publications</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="software.html">Software</a></li>
+    <li><a href="students.html">Students</a></li>
+  </ul>
+</div>
+</div>
+<div id="content">
+<h1 class="title">Evolutionary Computation and Machine Learning</h1>
+<ul class="org-ul">
+<li><a href="data/publications/2021-pmlr-martinez-domain-shift.pdf">Confronting domain shift in trained neural networks</a> C. Martinez, D. A. Najera-Flores, A. R. Brink, D. D. Quinn, E. Chatzi, and S. Forrest. <i>Proc. of Machine Learning Research (PMLR)</i> 148:176-192 (2021).</li>
+<li><a href="https://rdcu.be/cdMlq">A biological perspective on evolutionary computation</a> R. Miikkulainen and S. Forrest <i>Nature Machine Intelligence</i> 3:1-7, 2021.</li>
+<li><a href="data/publications/2021-gecco-muhilan-arc-routing.pdf">MA-ABC: A Memetic Algorithm Optimizing Attractiveness, Balance, and Cost for Capacitated Arc Routing Problems</a> M. Ramamoorthy, S. Forrest, and V. Syrotiuk. In <i>Genetic and Evolutionary Computation Conf. (GECCO)</i> (2021).</li>
+<li><a href="data/publications/TACO-GEVO-2020.pdf">Post-compiler performance tuning for general-purpose gpu kernels</a> J. Liou, X. Wang, S. Forrest, and C. Wu. <i>ACM Trans. on Architecture and Code Optimization</i> 17:4, 2020.</li>
+<li><a href="data/publications/2017-neat-alife.pdf">Automatically evolving a general controller for robot swarms</a> J. Eriksen, M. Moses and S. Forrest, <i>IEEE Symposium on Artificial Life</i>, 2017.</li>
+<li><a href="data/publications/2016-holland-memories-cacm.pdf">Adaptive computation: The multidisciplinary legacy of John H. Holland</a> <i>Communications of the ACM</i> 59(8):58–63 (2016) doi 10.1145/2964342.</li>
+<li><a href="data/publications/2015-netgear-repair.pdf">Repairing COTS router firmware without access to source code or test suites: A case study in evolutionary software repair</a>  E. Schulte, W. Weimer, and S. Forrest  The First International Genetic Improvement Workshop, 2015 (best paper award).</li>
+<li><a href="data/publications/2014-asplos-power.pdf">Post-compiler software optimization for reducing energy</a> E. Schulte, J. Dorn, S. Forrest, and W. Weimer, <i>Nineteenth International Conference on Architectural Support for Programming Languages and Operating Systems</i> (ASPLOS, 2014).</li>
+<li><a href="data/publications/2013-ase-genprog.pdf">Leveraging program equivalence for adaptive program repair: Models and first results</a>  W. Weimer, Z. Fry and S. Forrest <i>Automated Softare Engineering (ASE) Conference</i> (2013).</li>
+<li><a href="data/publications/2014-gpem-mutational-robustness.pdf">Software mutational robustness</a> Schulte, Z. P. Fry, E. Fast, W. Weimer and S. Forrest. <i>Genetic Programming and Evolvable Machines</i> 5(3):281–312 (2014).</li>
+<li><a href="data/publications/2013-asplos-binary-repair.pdf">Automated repair of binary and assembly programs for cooperating
+embedded devices</a>  E. Schulte, J. DiLorenzo, W. Weimer, S. Forrest <i>Eighteenth International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS</i> (2013).</li>
+<li><a href="data/publications/2012-icse-manybugs.pdf">A systematic study of automated program repair: Fixing 55 out of 105 bugs for $8.00 each</a> C. Le Goues, M. Dewey-Vogt, S. Forrest and
+W. Weimer. <i>International Conference on Software Engineering (ICSE)</i> (2012)</li>
+<li><a href="data/publications/2012-gecco-patch.pdf">Representations and operators for omproving evolutionary software repair</a> C. Le Goues, W. Weimer, S. Forrest. <i>Genetic and Evolutionary Computation Conference</i> (2012).</li>
+<li><a href="data/publications/2012-tse-genprog.pdf">GenProg: Automatic bug correction in real programs</a> C. Le Goues,
+T. Nguyen, S. Forrest, W. Weimer. <i>ACM Transactions on Software
+Engineering</i> 38:1 (2012)</li>
+<li><a href="data/publications/2010-cacm-gp.pdf">Automatic program repair with evolutionary computation</a> W. Weimer,
+S. Forrest, C. Le Goues, T. Nguyen.  <i>Communications of the ACM
+Research Highlight</i> 53:5 pp. 109-116 (2010)</li>
+<li><a href="data/publications/2010-ase-asm-repair.pdf">Automated program repair through the evolution of assembly code</a>
+E. Schulte, S. Forrest, and W. Weimer.  <i>25nd IEEE/ACM International
+Conference on Automated Software Engineering (ASE)</i> (2010)</li>
+<li><a href="data/publications/2010-gecco-fitness.pdf">Designing better fitness functions for automated program repair</a>
+E. Fast, C. Le Goues, W. Weimer, and S. Forrest. <i>Genetic and
+Evolutionary Computation Conference (GECCO)</i> (2010)</li>
+<li><a href="publications/gecco09.pdf">A genetic programming approach to automated software repair</a>
+S. Forrest T. Nguyen, W. Weimer and C. Le Goues. /GECCO '09:
+Proceedings of the 11th Annual conference on Genetic and
+evolutionary computation/, pp. 947-954 (2009). Best Paper in Genetic
+Programming Track.</li>
+<li><a href="publications/icse09.pdf">Automatically finding patches using genetic programming</a> W. Weimer,
+T. Nguyen, C. Le Goues and S. Forrest. <i>31st International
+Conference on Software Engineering</i> (ICSE) (2009). Winner of ACM
+SIGSOFT Distinguished Paper Award and IFIP TC2 Manfred Paul Award
+for Excellence in Software: Theory and Practice.</li>
+<li><i>Perspectives on Adaptation in Natural and Artificial Systems</i>
+L. Booker, S. Forrest, M. Mitchell and R. Riolo, Oxford University
+Press (2005).</li>
+<li><a href="publications/GATRS.pdf">Genetic Algorithms for Finding Polynomial Orderings</a> Jurgen Giesl,
+Fernando Esponda, and Stephanie Forrest. (2001)</li>
+<li><a href="publications/LearningClassifierSystems-00.pdf">Learning Classifier Systems</a> J. H. Holland, L.B. Booker,
+M. Colombetti, M. Dorigo, S. Forrest, D. G. Goldberg, R. L. Riolo,
+R. E. Smith, P. L. Lanzi, W. Stolzmann, S. W. Wilson Eds. <i>Springer
+Verlag</i>, pp. 3-32 (2000).</li>
+<li><a href="publications/handbook-of-ec.pdf">Fitness Landscapes: Royal Road Functions</a> M. Mitchell and
+S. Forrest. In Back, Fogel, and Michalewicx (Eds.) <i>Handbook of
+Evolutionary Computation</i>. Institute of Physics Publishing,
+Phiuladelphia and Bristol UK, B2.7:1-25 (1997).</li>
+<li><a href="publications/computing-surveys.pdf">Genetic Algorithms</a> S. Forrest. <i>Computing Surveys</i> Vol. 28:1,
+pp. 77-80 (1996).</li>
+<li><a href="publications/dna-fragment-94.pdf">Genetic operators for the DNA fragment-assembly problem</a> R. Parsons,
+S. Forrest, and C. Burks. <i>Machine Learning</i> Vol. 21:1/2, pp. 11-33
+(1995). <a href="http://www.cs.unm.edu/~forrest/abstracts.htm#dna-fragment-94">Abstract</a></li>
+<li><a href="publications/fdc-icga95.pdf">Fitness Distance Correlation as a Measure of Problem Difficulty for Genetic Algorithms</a> T. Jones and S. Forrest. In L.J. Eshelman (Ed.)
+<i>Proc. of the Sixth Int. Conf. on Genetic Algorithms</i> Morgan
+Kaufmann, San Francisco, CA, pp. 184-192 (1995). <a href="http://www.cs.unm.edu/~forrest/abstracts.htm#fdc-icga95">Abstract</a></li>
+<li><a href="publications/alife-93.pdf">Genetic algorithms and artificial life</a> M. Mitchell and
+S. Forrest. <i>Artificial Life</i>, Vol. 1, No. 3 (1994),
+pp. 267-289. Reprinted in C. G. Langton (Ed.) <i>Artificial Life: an
+Overview</i>, MIT Press, Cambridge, MA (1995). <a href="http://www.cs.unm.edu/~forrest/abstracts.htm#alife-93">Abstract</a></li>
+<li><a href="publications/NIPS-93.pdf">When will a genetic algorithm outperform hill climbing?</a> M. Mitchell,
+J.H. Holland, and S. Forrest. In J.D. Cowan, G. Tesauro, and
+J. Alspector, (eds.), <i>Advances in Neural Information Processing
+Systems</i>, Vol. 6, San Mateo, CA: Morgan Kaufmann (1994).</li>
+<li>"Genetic algorithms: Principles of adaptation applied to
+computation." S. Forrest. <i>Science</i>, Vol. 261, Aug. 1993,
+pp. 872-878. <b>Science</b> <a href="http://www.sciencemag.org/subscriptions/permissions.shtml">Reprints</a></li>
+<li><a href="publications/immune-92.pdf">Using genetic algorithms to explore pattern recognition in the immune system</a> S. Forrest, B. Javornik, R.E. Smith, and
+A.S. Perelson. <i>Evolutionary Computation</i>, Vol. 1, No. 3 (1993),
+pp. 191-211. <a href="http://www.cs.unm.edu/~forrest/abstracts.htm#immune-92">Abstract</a></li>
+<li>"What makes a problem hard for a genetic algorithm? Some anomalous
+results and their explanation." S. Forrest and M. Mitchell. <i>Machine
+Learning</i>, Vol. 13, No. 2/3 (1993).</li>
+<li>"Towards a stronger building-blocks hypothesis: Effects of relative
+building-block fitness on GA performance." S. Forrest and
+M. Mitchell. In <i>Proceedings of a Workshop on Foundations of Genetic
+Algorithms</i>, Los Altos, CA: Morgan Kaufmann (1993).</li>
+<li>"Genetic algorithms for DNA sequence assembly." R. Parsons,
+S. Forrest, and C. Burks. In L. Hunter, et al., (eds.), /Proceedings
+of the First International Conference on Intelligent Systems for
+Molecular Biology/, Menlo Park, CA: AAAI/MIT Press (1993).</li>
+<li><a href="publications/immune-93a.pdf">Searching for diverse, cooperative populations with genetic algorithms</a> R.E. Smith, S. Forrest, and A.S. Perelson. <i>Evolutionary
+Computation</i>, Vol. 1, No. 2, pp. 127-149 (1993). <a href="http://www.cs.unm.edu/~immsec/publications/abstracts.htm#immune-93a">Abstract</a></li>
+<li>"The royal road for genetic algorithms: Fitness landscapes and GA
+performance." M. Mitchell, S. Forrest, and J.H. Holland. In
+<i>Proceedings of the First European Conference on Artificial Life</i>,
+Cambridge, MA: MIT Press (1992).</li>
+<li>"Using genetic algorithms for controller design: Simultaneous
+stabilization and eigenvalue placement in a region."
+W.E. Schmitendorf, O. Shaw, R. Benson, and S. Forrest. In
+<i>Proceedings of AIAA Guidance Navigation and Control Conference</i>,
+Hilton Head, SC, Aug. 1992.</li>
+<li>"Genetic algorithms, nonlinear dynamical systems, and global
+stability models." S. Forrest and G. Mayer-Kress. In L. Davis,
+(ed.), <i>The Handbook of Genetic Algorithms</i>, New York, NY: Van
+Nostrand Reinhold (1991).</li>
+</ul>
+
+<p>
+<a href="pubs.html">Other Publications</a>
+</p>
+</div>
+</body>
+</html>

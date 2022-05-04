@@ -1,0 +1,100 @@
+a { color: navy; }
+a:visited { color: #404040; }
+
+/* content */
+h1.title { font-size: 24px; }
+
+div#content {
+    margin: 0 2em;
+    padding: 0 6.25%; }
+
+div#content img.left {
+    float: left;
+    margin: 20px 20px 20px 0px; }
+
+@media(max-width:680px){
+    div#content img.left{ display: none; } } 
+
+div#content img.right {
+    float: right;
+    margin: 20px 20px 0px 20px; }
+
+@media(max-width:680px){
+    div#content img.right{
+        width: 134.666666px;
+        height: 142.666666px; } }
+
+div#content dl { margin: 0.5em; }
+
+/* preamble */
+div#preamble {
+    margin-left: auto;
+    margin-right: auto; }
+
+div#preamble h1#top-title {
+    margin: auto;
+    text-align: center;
+    z-index: 1; }
+
+div#preamble h1#top-title a {
+    color: black;
+    text-decoration: none; }
+
+a#unmlogo, a:link#unmlogo, a:visited#unmlogo { color: transparent; }
+a#sfilogo, a:link#sfilogo, a:visited#sfilogo { color: transparent; }
+
+a#unmlogo {
+    position: absolute;
+    top: 0.25em;
+    left: 0.25em;
+    width: 65px;
+    height: 50px;
+    z-index: 0; }
+
+a#sfilogo {
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    width: 150px;
+    height: 43px;
+    z-index: 0; }
+
+@media(max-width:680px){
+    a#unmlogo{ display:none; }
+    a#sfilogo{ display:none; }
+}
+
+div#links {
+    clear: both;
+    margin: auto;
+    border-bottom: 1px solid silver;
+    text-align: center; }
+
+div#links li {
+    display: inline;
+    list-style-type: none;
+    margin: auto;
+    padding: 0.25em; }
+
+/* postamble */
+div#contact-info {
+    max-width: 45em;
+    margin: 0.5em auto; }
+
+div#contact-info div {
+    display: inline;
+    max-width: 50%;
+    padding: 2em 0;
+    text-align: center; }
+
+div#contact-info div.left { float: left; }
+
+div#contact-info div.right { float: right; }
+
+@media(max-width:680px){
+    div#contact-info div.left {
+        float: none;
+        text-align: left; }
+    div#contact-info div.right {
+        float: none;
+        text-align: left; } }
